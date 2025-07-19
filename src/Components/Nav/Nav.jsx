@@ -1,22 +1,28 @@
 import React from "react";
 import { Tema } from "./Tema";
+import { Links } from "./Links";
+import Logo from "../../assets/Logo.png"
+import MenuMobile from "../../assets/Menu-hamburguer.png"
 
 export function Nav() {
 
     return (
         <header>
-            <nav className="flex items-center gap-50 h-24 w-screen bg-nav-claro">
+            <nav className="flex items-center md:gap-50 h-24 w-screen bg-nav-claro">
                 
-                <button className="ml-10">Logo</button>
-
+                <img src={Logo} alt="logo" className="w-10 md:w-18 ml-3"/>
                 <Tema  className="border-2-red-300" />
+                
+                <div className="md:hidden ">
+                    <img src={MenuMobile} alt="menu" className="ml-50"/>
+                </div>
 
-                <ul className="flex gap-14">
-                    <li className="text-texto-branco font-texto-normal">Login/Cadastro</li>
-                    <li className="text-texto-branco font-texto-normal">Instruções</li>
-                    <li className="text-texto-branco font-texto-normal">Produtos</li>
-                    <li className="text-texto-branco font-texto-normal">Referências</li>
-                    <li className="text-texto-branco font-texto-normal">Sobre nós</li>
+                <ul className="hidden md:flex gap-14">
+                    <li> <Links texto="Login/Cadastro" link="" /> </li>
+                    <li> <Links  texto="Instruções" /> </li>
+                    <li> <Links texto="Produtos" /> </li>
+                    <li> <Links  texto="Referências" /> </li>
+                    <li> <Links  texto="Sobre nós" /> </li>
                 </ul>
             </nav>
         </header>
