@@ -8,22 +8,14 @@ export function Nav() {
 
     return (
         <header>
-            <nav className="flex items-center md:gap-50 h-24 w-screen bg-nav-claro">
+            <nav className="flex items-center md:gap-50 h-24 w-screen bg-nav-claro justify-between">
                 
                 <img src={Logo} alt="logo" className="w-10 md:w-18 ml-3"/>
                 <Tema  className="border-2-red-300" />
                 
                 <div className="md:hidden ">
-                    <img src={MenuMobile} alt="menu" className="ml-50"/>
+                    <img src={MenuMobile} alt="menu" className="w-12.5 mr-4"/>
                 </div>
-
-                <ul className="hidden md:flex gap-14">
-                    <li> <Links texto="Login/Cadastro" link="" /> </li>
-                    <li> <Links  texto="Instruções" /> </li>
-                    <li> <Links texto="Produtos" /> </li>
-                    <li> <Links  texto="Referências" /> </li>
-                    <li> <Links  texto="Sobre nós" /> </li>
-                </ul>
             </nav>
         </header>
     );

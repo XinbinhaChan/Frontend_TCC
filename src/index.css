@@ -22,5 +22,7 @@
     --color-texto-branco: #ffffff;
     --color-texto-azul: #36D9C8;
 
+    --color-gradiente-home: linear-gradient(to bottom, #13675E, #36D9C8);
+
 
 }
