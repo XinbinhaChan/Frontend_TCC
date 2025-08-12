@@ -1,10 +1,17 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @theme {
 
     /*Fontes*/
     --font-texto-normal: 'Montserrat', sans-serif;
+
+    --font-texto-normal-mobile: 'Inter', sans-serif;
+
+
+
+    --font-h1-mobile: 'Inter', sans-serif;
 
     /*Cores*/
     --color-fundo-tema-claro: #A8FFF6;
@@ -14,6 +21,9 @@
     --color-fundo-tema-escuro: #061F1C;
     --color-gradiente1-tema-escuro: #36D9C8;
     --color-gradiente2-tema-escuro: #061F1C;
+
+    --color-gradiente1-h1: #20A99B;
+    --color-gradiente2-h1: #0D433D;
 
 
     --color-nav-claro: #1C1C1C;
