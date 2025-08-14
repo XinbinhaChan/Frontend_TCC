@@ -6,6 +6,7 @@ import HomeClareador from "../../assets/HomeClareador.png";
 
 import MemoryBot from "../../assets/MemoryBot.png";
 import { Instruções } from "../Buttons/Instruções";
+import IconsHome from "../Icons/IconsHome";
 
 export function Home() {
   return (
@@ -52,8 +53,12 @@ export function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center">   
+      <div className="flex justify-center mb-24">   
       <Instruções />
+      </div>
+
+      <div>
+        <IconsHome />
       </div>
 
     </main>
