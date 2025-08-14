@@ -5,6 +5,7 @@ import HomeCirc from "../../assets/HomeCirc.png";
 import HomeClareador from "../../assets/HomeClareador.png";
 
 import MemoryBot from "../../assets/MemoryBot.png";
+import { Instruções } from "../Buttons/Instruções";
 
 export function Home() {
   return (
@@ -28,28 +29,33 @@ export function Home() {
 
         </div>
 
-        <div>
+        <div className="mb-20">
           <img
           src={HomeCirc}
           alt="Decorative Circle"
           
-          className="right-3 w-55.3125 h-26.7525 mt-45 absolute border-amber-400 border-2"
+          className="right-3 w-55.3125 h-26.7525 mt-45 absolute"
         />
 
         <img
           src={HomeClareador}
           alt=""
-          className="right-0 w-60 h-25 mt-59 absolute rotate-170 border-2 border-red-400"
+          className="right-0 left-32 w-65 h-25 mt-59 absolute rotate-170"
 
         />
 
         <img
           src={MemoryBot}
           alt="Mobile Memory Bot"
-          className="right-5 w-50 h-80 mt-25 absolute drop-shadow-2xl border-2 border-green-400"
+          className="right-5 w-50 h-80 mt-25 absolute drop-shadow-2xl"
         />
         </div>
       </div>
+
+      <div className="flex justify-center">   
+      <Instruções />
+      </div>
+
     </main>
   );
 }

@@ -9,6 +9,8 @@
 
     --font-texto-normal-mobile: 'Inter', sans-serif;
 
+    --font-link-mobile: 'Montserrat', sans-serif;
+
 
 
     --font-h1-mobile: 'Inter', sans-serif;
@@ -31,6 +33,9 @@
 
     --color-texto-branco: #ffffff;
     --color-texto-azul: #36D9C8;
+    --color-texto-escuro: #000000;
+
+    --color-fundo-botao: #9BECE4; 
 
     --color-gradiente-home: linear-gradient(to bottom, #13675E, #36D9C8);
 
