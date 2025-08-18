@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
 @theme {
 
@@ -11,7 +12,7 @@
 
     --font-link-mobile: 'Montserrat', sans-serif;
 
-
+    --font-game: 'Pixelify Sans', sans-serif;
 
     --font-h1-mobile: 'Inter', sans-serif;
 
@@ -33,6 +34,8 @@
 
     --color-texto-branco: #ffffff;
     --color-texto-azul: #36D9C8;
+    --color-texto-ciano: #13675E;
+    --color-texto-neon: #B1EDE6;
     --color-texto-escuro: #000000;
 
     --color-fundo-botao: #9BECE4; 
