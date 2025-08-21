@@ -16,6 +16,8 @@
 
     --font-h1-mobile: 'Inter', sans-serif;
 
+    
+
     /*Cores*/
     --color-fundo-tema-claro: #A8FFF6;
     --color-gradiente1-tema-claro: #A8FFF6;
@@ -39,7 +41,8 @@
     --color-texto-escuro: #000000;
 
     --color-fundo-botao: #9BECE4; 
-    --color-fundo-card: #C2C2C2;    
+    --color-fundo-card: #C2C2C2;   
+    --color-fundo-card2: #DFDFDF; 
 
     --color-gradiente-home: linear-gradient(to bottom, #13675E, #36D9C8);
 

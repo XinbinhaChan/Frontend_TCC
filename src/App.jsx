@@ -1,8 +1,10 @@
 import React from "react"
+import { Routes, Route } from "react-router-dom"
 
 import {Nav} from './Components/Nav/Nav.jsx'
-import {Home} from './Components/Páginas/Home.jsx'
-import { Produtos } from "./Components/Páginas/Produtos.jsx"
+import {Home} from './Components/Paginas/Home.jsx'
+import { Produtos } from "./Components/Paginas/Produtos.jsx"
+import { SobreNos } from "./Components/Paginas/SobreNos.jsx"
 
 export function App (){
     return ( 
@@ -11,7 +13,14 @@ export function App (){
              
         <Nav/> 
 
-        <Produtos/>
+        {/* <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/produtos" element={<Produtos />} />
+        <Route path="/sobre" element={<SobreNos />} />
+      </Routes> */}
+
+
+        <SobreNos/>
 
         </div>
     )
