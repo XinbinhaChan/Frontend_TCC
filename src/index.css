@@ -39,6 +39,7 @@
     --color-texto-escuro: #000000;
 
     --color-fundo-botao: #9BECE4; 
+    --color-fundo-card: #C2C2C2;    
 
     --color-gradiente-home: linear-gradient(to bottom, #13675E, #36D9C8);
 
@@ -46,5 +47,5 @@
 
     --color-gradiente-icons2: #2A837A;
 
-
+    --color-menu-hamburguer: #1C1C1C;
 }
