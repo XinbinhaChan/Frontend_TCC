@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Tema } from "./Tema";
 import { Links } from "./Links";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
 import MenuMobile from "../../assets/Menu-hamburguer.png";
 
@@ -14,30 +15,28 @@ export function Nav() {
   return (
     <header>
       {/* Pc */}
-      <nav className="flex items-center md:gap-50 h-16 w-screen bg-nav-claro justify-between fixed">
-        <img src={Logo} alt="logo" className="w-10 md:w-12 ml-3" />
-
-        <div className="hidden md:flex mr-4">
-           <Tema className="border-2-red-300" />
+      <nav className="flex items-center md:gap-50 h-16 w-screen bg-nav-claro justify-between z-40 fixed">
+        <div className="flex items-center gap-4">
+          <Link to="/">
+            <img src={Logo} alt="logo" className="w-10 md:w-12" />
+          </Link>
+          <div className="hidden md:flex ml-[125px]">
+            <Tema />
+          </div>
         </div>
 
-       
-
         <ul className="flex gap-10 text-texto-branco hidden md:flex mr-15">
-          <li className="hover:text-texto-azul">
-            <a href="#">Instruçoes</a>
+          <li>
+            <Links texto="Instruções" link="/produtos" />
           </li>
-
-          <li className="hover:text-texto-azul">
-            <a href="#">Produtos</a>
+          <li>
+            <Links texto="Produtos" link="/produtos" />
           </li>
-
-          <li className="hover:text-texto-azul">
-            <a href="#">Referências</a>
+          <li>
+            <Links texto="Referências" link="/produtos" />
           </li>
-
-          <li className="hover:text-texto-azul">
-            <a href="#">Sobre nós</a>
+          <li>
+            <Links texto="Sobre nós" link="/sobre" />
           </li>
         </ul>
 
@@ -57,22 +56,22 @@ export function Nav() {
           }
         >
           <ul className="text-texto-branco ">
-            <Tema className="border-2-red-300 " />
+            <Tema className="border-2-red-300 md:hidden" />
 
             <li>
-              <a href="#">Instruçoes</a>
+              <Links texto="Home" link="/" />
             </li>
-
             <li>
-              <a href="#">Produtos</a>
+              <Links texto="Instruções" link="/produtos" />
             </li>
-
             <li>
-              <a href="#">Referências</a>
+              <Links texto="Produtos" link="/produtos" />
             </li>
-
             <li>
-              <a href="#">Sobre nós</a>
+              <Links texto="Referências" link="/produtos" />
+            </li>
+            <li>
+              <Links texto="Sobre nós" link="/sobre" />
             </li>
           </ul>
         </div>

@@ -13,14 +13,13 @@ export function App (){
              
         <Nav/> 
 
-        {/* <Routes>
+          <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/produtos" element={<Produtos />} />
         <Route path="/sobre" element={<SobreNos />} />
-      </Routes> */}
-
-
-        <SobreNos/>
+        <Route path="/referencia" element={<SobreNos />} />
+        <Route path="/instrucao" element={<SobreNos />} />
+      </Routes>
 
         </div>
     )
