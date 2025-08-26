@@ -1,4 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 import HomeRet from "../../assets/HomeRet.png";
 import HomeCirc from "../../assets/HomeCirc.png";
@@ -7,6 +12,7 @@ import HomeAppRet from "../../assets/HomeAppRet.png";
 import HomeAppCel from "../../assets/HomeAppCel.png";
 import HomeGameWave from "../../assets/HomeGameWave.png";
 import HomeGameBg from "../../assets/HomeGameBg.png";
+import HomeRetDesktop from "../../assets/HomeRetDesktop.png";
 
 import MemoryBot from "../../assets/MemoryBot.png";
 
@@ -17,16 +23,34 @@ import { Game } from "../Buttons/Game";
 import IconsHome from "../Icons/IconsHome";
 
 export function Home() {
+  const [backgroundImage, setBackgroundImage] = useState(HomeRet);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const isDesktop = window.innerWidth >= 1024;
+      setBackgroundImage(isDesktop ? HomeRetDesktop : HomeRet);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <section
-        className="h-110 w-screen relative flex"
-        style={{ backgroundImage: `url(${HomeRet})` }}
+        className="h-110 w-screen relative flex md:h-250 "
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         <div className="mt-6 ml-1.25">
-          <h1 className="text-4xl font-h1-mobile font-bold text-texto-branco mb-4.75">
+          <h1 className="text-4xl font-h1-mobile font-bold text-texto-branco mb-4.75 mt-10 md:text-8xl md:mt-[87px] md:ml-[84px]">
             Memory
-            <strong className="font-h1-mobile text-4xl font-bold  bg-clip-text text-transparent bg-gradient-to-r from-[rgba(32,162,155,155.100)] via-70% to-[rgba(13,67,61,100)]">
+            <strong className="md:text-8xl font-h1-mobile text-4xl font-bold  bg-clip-text text-transparent bg-gradient-to-r from-[rgba(32,162,155,155.100)] via-70% to-[rgba(13,67,61,100)]">
               Bot
             </strong>
           </h1>
@@ -34,7 +58,7 @@ export function Home() {
           <p
             className="text-xs 
           font-texto-normal-mobile font-semibold font
-          text-texto-branco w-49 h-16 text-center"
+          text-texto-branco w-49 h-16 text-center md:text-3xl md:w-[652px] md:mr-8"
           >
             O MemoryBot é um robô assistente que ajuda pessoas com Alzheimer com
             lembretes, localização de objetos e interação simples por voz.
@@ -45,25 +69,25 @@ export function Home() {
           <img
             src={HomeCirc}
             alt="Decorative Circle"
-            className="right-3 w-55.3125 h-26.7525 mt-45 absolute"
+            className="right-3 w-55.3125 h-26.7525 mt-45 absolute md:w-[713.68px] md:mt-50.5"
           />
 
           <img
             src={HomeClareador}
             alt=""
-            className="right-0 left-32 w-65 h-25 mt-59 absolute rotate-170"
+            className="right-0 left-32 w-65 h-25 mt-59 absolute rotate-170 md:hidden"
           />
 
           <img
             src={MemoryBot}
             alt="Mobile Memory Bot"
-            className="right-5 w-50 h-80 mt-25 absolute drop-shadow-2xl"
+            className="right-5 w-50 h-80 mt-25 absolute drop-shadow-2xl md:w-[526px] md:h-[810px] md:mt-35 md:mr-10"
           />
         </div>
       </section>
 
-      <div className="flex justify-center mb-24">
-        <Instruções />
+      <div className="flex justify-center mb-24 md:absolute md:top-110 md:left-50">
+        <Instruções/>
       </div>
 
       <section className="mb-20">

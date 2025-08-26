@@ -1,7 +1,9 @@
 import React from "react";
 
-import SobreNosWave1 from "../../assets/SobreNosWave1.png";
 import { CardSobreNos } from "../Cards/CardSobreNos";
+
+import SobreNosWave1 from "../../assets/SobreNosWave1.png";
+import Rafalino from "../../assets/Rafalino.jpeg";
 
 export function SobreNos() {
   return (
@@ -21,8 +23,42 @@ export function SobreNos() {
         </div>
       </div>
 
-      <div >
-        <CardSobreNos />
+      <div className="grid grid-cols-2 gap-10">
+        <CardSobreNos
+          img={Rafalino}
+          nome="Rafael"
+          funcao="Líder e Desenvolvedor do jogo e site"
+          linkGithub="https://github.com/RafaelLfckkj"
+          linkLinkedin="https://www.linkedin.com/in/rafaolivedev/"
+          linkInsta="https://www.instagram.com/rafaellfckkj/"
+        />
+
+        <CardSobreNos
+          img={Rafalino}
+          nome="Maximiano"
+          funcao="Designer e Desenvolvedor do site"
+          linkGithub="https://github.com/XinbinhaChan"
+          linkLinkedin="https://www.linkedin.com/in/matheus-maximiano-bb5bbb305/"
+          linkInsta="https://www.instagram.com/xinbinha_chan17/profilecard/?igsh=MXZuejdlM2Exb3E3NQ=="
+        />
+
+        <CardSobreNos
+          img={Rafalino}
+          nome="Navarro"
+          funcao="Designer e Desenvolvedor do projeto"
+          linkGithub="https://github.com/matheusnw1"
+          linkLinkedin="https://www.linkedin.com/in/matheus-navarro-wenceslau-1418b7335/"
+          linkInsta="https://www.instagram.com/matheus.nww/"
+        />
+
+        <CardSobreNos
+          img={Rafalino}
+          nome="Yago"
+          funcao="Desenvolvedor principal do projeto"
+          linkGithub="https://github.com/YagoVid"
+          linkLinkedin="https://www.linkedin.com/in/yago-vidal-oliveira-de-almeida-449883304/"
+          linkInsta="https://www.instagram.com/yagovidar/"
+        />
       </div>
     </div>
   );
