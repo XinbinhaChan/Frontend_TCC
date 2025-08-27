@@ -15,7 +15,7 @@ export function Nav() {
   return (
     <header>
       {/* Pc */}
-      <nav className="flex items-center md:gap-50 h-16 w-screen bg-nav-claro justify-between z-40 fixed">
+      <nav className="flex items-center md:gap-50 h-16 w-screen bg-nav-claro justify-between z-40 ">
         <div className="flex items-center gap-4">
           <Link to="/">
             <img src={Logo} alt="logo" className="w-10 md:w-12" />
@@ -27,13 +27,13 @@ export function Nav() {
 
         <ul className="flex gap-10 text-texto-branco hidden md:flex mr-15">
           <li>
-            <Links texto="Instruções" link="/produtos" />
+            <Links texto="Instruções" link="/instrucao" />
           </li>
           <li>
             <Links texto="Produtos" link="/produtos" />
           </li>
           <li>
-            <Links texto="Referências" link="/produtos" />
+            <Links texto="Referências" link="/referencia" />
           </li>
           <li>
             <Links texto="Sobre nós" link="/sobre" />
@@ -62,13 +62,13 @@ export function Nav() {
               <Links texto="Home" link="/" />
             </li>
             <li>
-              <Links texto="Instruções" link="/produtos" />
+              <Links texto="Instruções" link="/instrucao" />
             </li>
             <li>
               <Links texto="Produtos" link="/produtos" />
             </li>
             <li>
-              <Links texto="Referências" link="/produtos" />
+              <Links texto="Referências" link="/referencia" />
             </li>
             <li>
               <Links texto="Sobre nós" link="/sobre" />

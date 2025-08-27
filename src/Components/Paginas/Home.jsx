@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import HomeRet from "../../assets/HomeRet.png";
 import HomeCirc from "../../assets/HomeCirc.png";
@@ -13,12 +12,14 @@ import HomeAppCel from "../../assets/HomeAppCel.png";
 import HomeGameWave from "../../assets/HomeGameWave.png";
 import HomeGameBg from "../../assets/HomeGameBg.png";
 import HomeRetDesktop from "../../assets/HomeRetDesktop.png";
+import HomeAppRetDesktop from "../../assets/HomeAppRetDesktop.png";
+import HomeAppCelDesktop from "../../assets/HomeAppCelDesktop.png";
 
 import MemoryBot from "../../assets/MemoryBot.png";
 
-import { Instruções } from "../Buttons/Instruções";
-import { Download } from "../Buttons/Download";
-import { Game } from "../Buttons/Game";
+import { ButtonInstrucoes } from "../Buttons/ButtonInstrucoes.jsx";
+import { ButtonDownload } from "../Buttons/ButtonDownload.jsx";
+import { ButtonGame } from "../Buttons/ButtonGame.jsx";
 
 import IconsHome from "../Icons/IconsHome";
 
@@ -87,7 +88,9 @@ export function Home() {
       </section>
 
       <div className="flex justify-center mb-24 md:absolute md:top-110 md:left-50">
-        <Instruções/>
+        <Link to="/instrucao">
+          <ButtonInstrucoes />
+        </Link>
       </div>
 
       <section className="mb-20">
@@ -102,8 +105,13 @@ export function Home() {
         </div>
 
         <div
-          className="h-87 w-screen flex justify-between"
+          className="h-87 w-screen flex justify-between md:hidden"
           style={{ backgroundImage: `url(${HomeAppRet})` }}
+        >
+        </div>
+        <div
+          className="h-87 w-screen flex justify-between md:block"
+          style={{ backgroundImage: `url(${HomeAppRetDesktop})` }}
         >
           <div className="ml-2.5 w-35 h-12 mt-20">
             <h2 className="font-h1-mobile text-xs font-bold text-texto-branco">
@@ -111,8 +119,12 @@ export function Home() {
             </h2>
           </div>
 
-          <div className="w-screen h-88.5 mt-10">
+          <div className="w-screen h-88.5 mt-10 md:hidden">
             <img src={HomeAppCel} alt="App Memory Bot" className="" />
+          </div>
+
+          <div className="w-screen h-88.5 mt-10 md:block">
+            <img src={HomeAppCelDesktop} alt="App Memory Bot" className="" />
           </div>
         </div>
 
@@ -125,7 +137,7 @@ export function Home() {
           </p>
 
           <div>
-            <Download />
+            <ButtonDownload />
           </div>
         </div>
       </section>
@@ -144,7 +156,9 @@ export function Home() {
           </div>
 
           <div className="flex justify-center">
-            <Game />
+            <Link to="/game">
+              <ButtonGame />
+            </Link>
           </div>
         </div>
       </section>
