@@ -48,7 +48,7 @@ export function Produtos() {
             <CardProdutos img={CardProdutosServo} nome="Servo" preco="R$ 55,00"/>
         </section>
 
-          <img src={HomeGameWave} alt="" className=''/>
+          <img src={HomeGameWave} alt="" className='md:hidden'/>
 
         </div>
         

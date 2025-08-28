@@ -10,7 +10,9 @@ import HomeClareador from "../../assets/HomeClareador.png";
 import HomeAppRet from "../../assets/HomeAppRet.png";
 import HomeAppCel from "../../assets/HomeAppCel.png";
 import HomeGameWave from "../../assets/HomeGameWave.png";
+import HomeGameWaveDesktop from "../../assets/HomeGameWaveDesktop.png";
 import HomeGameBg from "../../assets/HomeGameBg.png";
+import HomeGameBgDesktop from "../../assets/HomeGameBgDesktop.png";
 import HomeRetDesktop from "../../assets/HomeRetDesktop.png";
 import HomeAppRetDesktop from "../../assets/HomeAppRetDesktop.png";
 import HomeAppCelDesktop from "../../assets/HomeAppCelDesktop.png";
@@ -130,18 +132,31 @@ export function Home() {
           <div className="ml-[75px] h-12 mt-20 hidden md:flex ">
             <h2 className="font-h1-mobile text-left text-4xl mt-75 font-bold text-texto-branco md:w-[528px]">
               <span className="text-texto-ciano">Controle</span> e <br />
-              <span className="text-texto-ciano"> Acompanhamento</span> na <br /> Palma
-              da Mão
+              <span className="text-texto-ciano"> Acompanhamento</span> na{" "}
+              <br /> Palma da Mão
             </h2>
           </div>
 
           <div className="w-screen h-88.5 ml-220 mt-10 hidden md:block md:w-150">
             <img src={HomeAppCelDesktop} alt="App Memory Bot" className="" />
           </div>
+
+          <div className="flex flex-col justify-center items-center gap-7 md:justify-left md:items-center ">
+            <p className="text-xs md:text-3xl md:w-[592px] md:text-left md:mb-50 md:mr-190 md:mt-50 font-texto-normal-mobile font-semibold w-69 h-20 text-texto-ciano text-center mb-5">
+              Gerencie as configurações do MemoryBot, personalize lembretes
+              remotamente, acompanhe a rotina do usuário e receba notificações
+              importantes diretamente no seu smartphone. Uma interface simples e
+              acessível para cuidadores e familiares
+            </p>
+
+            <div>
+              <ButtonDownload />
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-7 md:justify-left md:items-center">
-          <p className="text-xs md:text-3xl md:w-[592px] md:text-left md:mb-50 md:mr-190  font-texto-normal-mobile font-semibold w-69 h-20 text-texto-ciano text-center mb-5">
+        <div className="md:hidden flex-col justify-center items-center gap-7">
+          <p className="text-xs font-texto-normal-mobile font-semibold w-69 h-20 text-texto-ciano text-center mb-5">
             Gerencie as configurações do MemoryBot, personalize lembretes
             remotamente, acompanhe a rotina do usuário e receba notificações
             importantes diretamente no seu smartphone. Uma interface simples e
@@ -156,11 +171,15 @@ export function Home() {
 
       <section>
         <img src={HomeGameWave} alt="" className="w-screen h-max md:hidden" />
-        <img src="" alt="" className="hidden md:block"/>
+        <img
+          src={HomeGameWaveDesktop}
+          alt=""
+          className="hidden md:block bg-cover w-full "
+        />
 
         <div
           style={{ backgroundImage: `url(${HomeGameBg})` }}
-          className="w-screen flex flex-col justify-center items-center gap-39 h-74.5"
+          className="w-screen flex flex-col justify-center items-center gap-39 h-74.5 md:hidden"
         >
           <div>
             <h1 className="font-game text-3xl font-bold text-texto-neon flex justify-center">
@@ -174,6 +193,25 @@ export function Home() {
             </Link>
           </div>
         </div>
+
+        <div className="relative w-full h-[1138px]">
+          <img
+            src={HomeGameBgDesktop}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+
+          <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center ">
+            <h1 className="font-game md:text-8xl font-bold text-texto-neon md:mb-[591px]">
+              MemoryBot
+            </h1>
+
+            <Link to="/game">
+              <ButtonGame />
+            </Link>
+          </div>
+        </div>
+        
       </section>
     </main>
   );

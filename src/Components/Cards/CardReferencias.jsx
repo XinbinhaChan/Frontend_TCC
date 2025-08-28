@@ -1,14 +1,20 @@
-import React from 'react'
+import React from "react";
+
+import ReferenciasPdfIcon from "../../assets/ReferenciasPdfIcon.png";
 
 export function CardReferencias(props) {
   return (
-    <div className='bg-red-500 flex justify-center items-center flex-col w-31'>
-        <div className='bg-blue-500 flex justify-center items-center w-31'>
-            <img src="" alt="" className='border-2 w-5 h-5' />
-        </div>
-        <div>
-            <p className='text-texto-escuro font-texto-normal-mobile text-[10px] w-21 text-center'>{props.texto}</p>
-        </div>
+    <div className="bg-fundo-card2 flex items-center flex-col w-31 h-31 rounded-xl shadow-xl">
+      <div className="bg-fundo-card flex justify-center rounded-xl  items-center w-31 h-16.5">
+        <a href={props.download} download={props.arquivo}>
+          <img src={ReferenciasPdfIcon} alt="" className=" w-8 h-8" />
+        </a>
+      </div>
+      <div>
+        <p className="text-texto-escuro font-texto-normal-mobile text-[8px] w-21 h-7  text-center">
+          {props.texto}
+        </p>
+      </div>
     </div>
-  )
+  );
 }

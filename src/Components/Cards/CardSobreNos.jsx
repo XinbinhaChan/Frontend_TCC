@@ -6,9 +6,9 @@ import CardSobreNosGithub from "../../assets/CardSobreNosGithub.png";
 
 export function CardSobreNos(props) {
   return (
-    <div className="bg-fundo-card2 w-39 h-57 flex flex-col justify-center items-center rounded-3xl">
+    <div className="bg-fundo-card2 md:w-[555px] md:h-[609px] w-39 h-57 flex flex-col justify-center items-center rounded-3xl">
       <img src={props.img} alt="" className=" rounded-full w-15 h-15" />
-      <div className="bg-fundo-card w-39 h-42 flex flex-col justify-center items-center rounded-3xl">
+      <div className="bg-fundo-card  md:w-[555px] md:h-[446.77px] w-39 h-42 flex flex-col justify-center items-center rounded-3xl">
         <div className="flex flex-col justify-center items-center mb-5">
           <h1 className="font-texto-normal-mobile text-3xl text-texto-ciano">
             {props.nome}

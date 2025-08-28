@@ -3,22 +3,37 @@ import React from "react";
 import { CardReferencias } from "../Cards/CardReferencias";
 
 import ReferenciasWave1 from "../../assets/ReferenciasWave1.png";
+import ReferenciasWave2 from "../../assets/ReferenciasWave2.png";
+
+import DA from "../../downloads/DA.pdf";
+import DAMA from "../../downloads/DAMA.pdf";
+import FF from "../../downloads/FF.pdf";
+import RC from "../../downloads/RC.pdf";
 
 export function Referencias() {
   return (
-    <main className="flex flex-col justify-center items-center">
+    <main className="flex flex-col justify-center items-center ">
       <div
-        className="w-screen h-60 z-[-1] absolute pt-50 mt-36 flex flex-col justify-center items-center"
+        className="w-90 h-65 z-[-1] absolute left-0 pt-50 mt-36 flex flex-col justify-center items-center"
         style={{ backgroundImage: `url(${ReferenciasWave1})` }}
       >
-        <h1 className="text-texto-escuro text-[40px] font-texto-normal-mobile font-bold mb-">
+        <h1 className="text-texto-escuro text-[40px] font-texto-normal-mobile font-bold mt-120 mb-8">
           Referências
         </h1>
 
-        <div className="">
-          <CardReferencias texto="Doença de Alzheimer (Rev Bras Bisig Jadr)" />
+        <div className=" justify-center items-center grid grid-cols-2 gap-15">
+          <CardReferencias texto="Doença de Alzheimer (Rev Bras Bisig Jadr)" download={DA} arquivo="Doença_de_Alzheimer.pdf"/>
+
+          <CardReferencias texto="Reabilitação Cognitiva em Pacientes com Doença de Alzheimer (Arq Neuropsiquiatr)" download={RC} arquivo="Reabilitação_Cognitiva.pdf"/>
+
+          <CardReferencias texto=" A Doença de Alzheimer: Aspectos Fisiopatológicos e Farmacológicos (Rev Psiquiatr RS)" download={FF} arquivo="Fisiopatológicos_Farmacológicos.pdf"/>
+
+          <CardReferencias texto="Demência de Alzheimer: Correlação entre Memória e Autonomia (Rev Psig Clin)" download={DAMA} arquivo="Demencia_de_Alzheimer.pdf"/>
         </div>
+
+        <img src={ReferenciasWave2} alt="" className="w-screen h-65 ml-10"/>
       </div>
+      
     </main>
   );
 }
