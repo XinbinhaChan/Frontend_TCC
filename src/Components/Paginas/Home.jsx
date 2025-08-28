@@ -104,32 +104,44 @@ export function Home() {
           </h1>
         </div>
 
+        {/* Mobile */}
+
         <div
-          className="h-87 w-screen flex justify-between md:hidden"
+          className="h-87 w-screen flex justify-between  md:hidden"
           style={{ backgroundImage: `url(${HomeAppRet})` }}
         >
-        </div>
-        <div
-          className="h-87 w-screen flex justify-between md:block"
-          style={{ backgroundImage: `url(${HomeAppRetDesktop})` }}
-        >
-          <div className="ml-2.5 w-35 h-12 mt-20">
+          <div className="ml-2.5 w-35 h-12 mt-20  md:hidden">
             <h2 className="font-h1-mobile text-xs font-bold text-texto-branco">
               Controle e Acompanhamento na Palma da Mão
             </h2>
           </div>
 
-          <div className="w-screen h-88.5 mt-10 md:hidden">
+          <div className="w-screen h-88.5 mt-10 block md:hidden">
             <img src={HomeAppCel} alt="App Memory Bot" className="" />
           </div>
+        </div>
 
-          <div className="w-screen h-88.5 mt-10 md:block">
+        {/* Pc */}
+
+        <div
+          className="md:h-250 w-screen  justify-between hidden md:block bg-cover"
+          style={{ backgroundImage: `url(${HomeAppRetDesktop})` }}
+        >
+          <div className="ml-[75px] h-12 mt-20 hidden md:flex ">
+            <h2 className="font-h1-mobile text-left text-4xl mt-75 font-bold text-texto-branco md:w-[528px]">
+              <span className="text-texto-ciano">Controle</span> e <br />
+              <span className="text-texto-ciano"> Acompanhamento</span> na <br /> Palma
+              da Mão
+            </h2>
+          </div>
+
+          <div className="w-screen h-88.5 ml-220 mt-10 hidden md:block md:w-150">
             <img src={HomeAppCelDesktop} alt="App Memory Bot" className="" />
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-7">
-          <p className="text-xs font-texto-normal-mobile font-semibold w-69 h-20 text-texto-ciano text-center mb-5">
+        <div className="flex flex-col justify-center items-center gap-7 md:justify-left md:items-center">
+          <p className="text-xs md:text-3xl md:w-[592px] md:text-left md:mb-50 md:mr-190  font-texto-normal-mobile font-semibold w-69 h-20 text-texto-ciano text-center mb-5">
             Gerencie as configurações do MemoryBot, personalize lembretes
             remotamente, acompanhe a rotina do usuário e receba notificações
             importantes diretamente no seu smartphone. Uma interface simples e
@@ -143,7 +155,8 @@ export function Home() {
       </section>
 
       <section>
-        <img src={HomeGameWave} alt="" className="w-screen h-max" />
+        <img src={HomeGameWave} alt="" className="w-screen h-max md:hidden" />
+        <img src="" alt="" className="hidden md:block"/>
 
         <div
           style={{ backgroundImage: `url(${HomeGameBg})` }}
