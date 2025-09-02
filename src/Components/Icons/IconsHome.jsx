@@ -12,7 +12,7 @@ export default function IconsHome() {
   const [mouse, setMouse] = useState(false);
 
   return (
-    <div className="flex flex-col justify-center items-center gap-7 md:gap-[187px]">
+    <div className="flex flex-col justify-center items-center gap-7 md:gap-[187px] " >
       <div
         class={`bg-gradient-to-r from-gradiente-icons1 to-gradiente-icons2 rounded-full p-1 ${
           mouse ? "transform -translate-x-20 " : ""

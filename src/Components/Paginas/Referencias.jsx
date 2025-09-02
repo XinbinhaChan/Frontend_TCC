@@ -14,14 +14,14 @@ export function Referencias() {
   return (
     <main className="flex flex-col justify-center items-center ">
       <div
-        className="w-90 h-65 z-[-1] absolute left-0 pt-50 mt-36 flex flex-col justify-center items-center"
+        className="w-90 h-65 z-[-1] absolute left-0 pt-50 mt-36 flex flex-col justify-center items-center "
         style={{ backgroundImage: `url(${ReferenciasWave1})` }}
       >
-        <h1 className="text-texto-escuro text-[40px] font-texto-normal-mobile font-bold mt-120 mb-8">
+        <h1 className="text-texto-escuro text-[40px] font-texto-normal-mobile font-bold mt-120 mb-8 md:text-center">
           Referências
         </h1>
 
-        <div className=" justify-center items-center grid grid-cols-2 gap-15">
+        <div className=" justify-center items-center grid grid-cols-2 gap-15 md:gap-[80px] ">
           <CardReferencias texto="Doença de Alzheimer (Rev Bras Bisig Jadr)" download={DA} arquivo="Doença_de_Alzheimer.pdf"/>
 
           <CardReferencias texto="Reabilitação Cognitiva em Pacientes com Doença de Alzheimer (Arq Neuropsiquiatr)" download={RC} arquivo="Reabilitação_Cognitiva.pdf"/>
@@ -31,7 +31,7 @@ export function Referencias() {
           <CardReferencias texto="Demência de Alzheimer: Correlação entre Memória e Autonomia (Rev Psig Clin)" download={DAMA} arquivo="Demencia_de_Alzheimer.pdf"/>
         </div>
 
-        <img src={ReferenciasWave2} alt="" className="w-screen h-65 ml-10"/>
+        <img src={ReferenciasWave2} alt="" className="w-screen h-65 ml-10 md:hidden"/>
       </div>
       
     </main>

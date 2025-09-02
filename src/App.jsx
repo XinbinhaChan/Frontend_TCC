@@ -11,7 +11,7 @@ import { Game } from "./Components/Paginas/Game.jsx";
 
 export function App() {
   return (
-    <div className="gap-5">
+    <div className="gap-5 overflow-x-hidden">
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />

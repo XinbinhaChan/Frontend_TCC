@@ -26,7 +26,7 @@ import { ButtonGame } from "../Buttons/ButtonGame.jsx";
 import IconsHome from "../Icons/IconsHome";
 
 export function Home() {
-  const [backgroundImage, setBackgroundImage] = useState(HomeRet);
+   const [backgroundImage, setBackgroundImage] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,11 +34,24 @@ export function Home() {
       setBackgroundImage(isDesktop ? HomeRetDesktop : HomeRet);
     };
 
-    handleResize();
+    handleResize(); // inicializa com base no tamanho atual
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      AOS.init({ duration: 1000, once: false });
+      AOS.refresh();
+    }, 300); // tempo pra garantir que o DOM está pronto
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (!backgroundImage) return null; // evita erro de renderização antes da imagem estar pronta
+
+
 
   return (
     <main className="overflow-x-hidden">
@@ -61,7 +74,7 @@ export function Home() {
           <p
             className="text-xs 
           font-texto-normal-mobile font-semibold font
-          text-texto-branco w-49 h-16 text-center md:text-3xl md:w-[652px] md:mr-8"
+          text-texto-branco w-49 h-16 text-center md:text-3xl md:w-[652px] md:mr-8 "
           >
             O MemoryBot é um robô assistente que ajuda pessoas com Alzheimer com
             lembretes, localização de objetos e interação simples por voz.
@@ -100,8 +113,8 @@ export function Home() {
       </section>
 
       <section className="mb-15">
-        <div className="flex justify-center">
-          <h1 className="font-h1-mobile text-4xl font-bold  bg-clip-text text-transparent bg-gradient-to-r from-[rgba(32,162,155,155.100)] via-70% to-[rgba(13,67,61,100)]">
+        <div className="flex justify-center" >
+          <h1 className="font-h1-mobile text-4xl font-bold md:text-6xl  bg-clip-text text-transparent bg-gradient-to-r from-[rgba(32,162,155,155.100)] via-70% to-[rgba(13,67,61,100)]">
             Aplicativo
           </h1>
         </div>
@@ -109,11 +122,14 @@ export function Home() {
         {/* Mobile */}
 
         <div
-          className="h-87 w-screen flex justify-between  md:hidden"
+          className="h-87 w-screen flex justify-between  md:hidden bg-cover"
           style={{ backgroundImage: `url(${HomeAppRet})` }}
         >
           <div className="ml-2.5 w-35 h-12 mt-20  md:hidden">
-            <h2 className="font-h1-mobile text-xs font-bold text-texto-branco">
+            <h2
+              className="font-h1-mobile text-xs font-bold text-texto-branco"
+              data-aos="fade-right"
+            >
               Controle e Acompanhamento na Palma da Mão
             </h2>
           </div>
@@ -129,7 +145,10 @@ export function Home() {
           className="md:h-250 w-screen  justify-between hidden md:block bg-cover"
           style={{ backgroundImage: `url(${HomeAppRetDesktop})` }}
         >
-          <div className="ml-[75px] h-12 mt-20 hidden md:flex ">
+          <div
+            className="ml-[75px] h-12 mt-20 hidden md:flex "
+            data-aos="fade-up"
+          >
             <h2 className="font-h1-mobile text-left text-4xl mt-75 font-bold text-texto-branco md:w-[528px]">
               <span className="text-texto-ciano">Controle</span> e <br />
               <span className="text-texto-ciano"> Acompanhamento</span> na{" "}
@@ -137,7 +156,7 @@ export function Home() {
             </h2>
           </div>
 
-          <div className="w-screen h-88.5 ml-220 mt-10 hidden md:block md:w-150">
+          <div className="w-screen h-88.5 ml-220 mt-10 hidden md:block md:w-150 ">
             <img src={HomeAppCelDesktop} alt="App Memory Bot" className="" />
           </div>
 
@@ -149,21 +168,24 @@ export function Home() {
               acessível para cuidadores e familiares
             </p>
 
-            <div>
+            <div >
               <ButtonDownload />
             </div>
           </div>
         </div>
 
-        <div className="md:hidden flex-col justify-center items-center gap-7">
-          <p className="text-xs font-texto-normal-mobile font-semibold w-69 h-20 text-texto-ciano text-center mb-5">
+        <div
+          className="md:hidden flex-col justify-center items-center gap-7"
+          data-aos="fade-up"
+        >
+          <p className="text-xs font-texto-normal-mobile font-semibold w-69 h-20 text-texto-ciano text-center mb-10 ml-10">
             Gerencie as configurações do MemoryBot, personalize lembretes
             remotamente, acompanhe a rotina do usuário e receba notificações
             importantes diretamente no seu smartphone. Uma interface simples e
             acessível para cuidadores e familiares
           </p>
 
-          <div>
+          <div className="ml-30">
             <ButtonDownload />
           </div>
         </div>
@@ -194,7 +216,7 @@ export function Home() {
           </div>
         </div>
 
-        <div className="relative w-full h-[1138px]">
+        <div className="relative w-full h-[1138px] hidden md:block">
           <img
             src={HomeGameBgDesktop}
             alt=""
@@ -211,7 +233,6 @@ export function Home() {
             </Link>
           </div>
         </div>
-        
       </section>
     </main>
   );
