@@ -5,7 +5,7 @@ export function CardProdutos(props) {
     <div className='w-fit ml-2 mb-10'>
 
         <div className='w-30 md:w-[634px] md:h-[444px] h-20 flex items-center justify-center rounded-t-3xl border-2 border-fundo-card'>
-          <img src={props.img} alt="" className='w-20 h-20 md:w-[634px] md:h-[268px]'/>
+          <img src={props.img} alt="" className='w-20 h-20 md:w-[350px] md:h-[268px]'/>
         </div>
 
         <div className=' bg-fundo-card p-2 rounded-b-3xl md:h-[176px]'>

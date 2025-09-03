@@ -12,16 +12,16 @@ import RC from "../../downloads/RC.pdf";
 
 export function Referencias() {
   return (
-    <main className="flex flex-col justify-center items-center ">
+    <main className="flex flex-col justify-center items-center">
       <div
         className="w-90 h-65 z-[-1] absolute left-0 pt-50 mt-36 flex flex-col justify-center items-center "
         style={{ backgroundImage: `url(${ReferenciasWave1})` }}
       >
-        <h1 className="text-texto-escuro text-[40px] font-texto-normal-mobile font-bold mt-120 mb-8 md:text-center">
+        <h1 className="text-texto-escuro text-[40px] font-texto-normal-mobile font-bold mt-120 mb-8 md:text-center md:mb-40">
           Referências
         </h1>
 
-        <div className=" justify-center items-center grid grid-cols-2 gap-15 md:gap-[80px] ">
+        <div className=" justify-center items-center grid grid-cols-2 gap-15 md:gap-[80px] md:w-[1347px] md:h-[649px] ">
           <CardReferencias texto="Doença de Alzheimer (Rev Bras Bisig Jadr)" download={DA} arquivo="Doença_de_Alzheimer.pdf"/>
 
           <CardReferencias texto="Reabilitação Cognitiva em Pacientes com Doença de Alzheimer (Arq Neuropsiquiatr)" download={RC} arquivo="Reabilitação_Cognitiva.pdf"/>
