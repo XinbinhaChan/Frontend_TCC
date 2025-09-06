@@ -26,37 +26,51 @@ import { ButtonGame } from "../Buttons/ButtonGame.jsx";
 import IconsHome from "../Icons/IconsHome";
 
 export function Home() {
-   const [backgroundImage, setBackgroundImage] = useState(null);
+  const [backgroundImage, setBackgroundImage] = useState(null);
+  const [isAOSReady, setIsAOSReady] = useState(false);
 
+  
   useEffect(() => {
     const handleResize = () => {
       const isDesktop = window.innerWidth >= 1024;
       setBackgroundImage(isDesktop ? HomeRetDesktop : HomeRet);
     };
 
-    handleResize(); // inicializa com base no tamanho atual
+    handleResize(); 
     window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
+  
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      AOS.init({ duration: 1000, once: false });
-      AOS.refresh();
-    }, 300); // tempo pra garantir que o DOM está pronto
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
+      delay: 100,
+    });
 
-    return () => clearTimeout(timeout);
+    setIsAOSReady(true);
+
+    
+    const handleLoad = () => AOS.refresh();
+    window.addEventListener("load", handleLoad);
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+      AOS.refreshHard();
+    };
   }, []);
 
-  if (!backgroundImage) return null; // evita erro de renderização antes da imagem estar pronta
-
-
+  if (!backgroundImage || !isAOSReady) return null;
 
   return (
     <main className="overflow-x-hidden">
       <section
-        className="h-110 w-screen relative flex md:h-250 "
+        className="h-110 w-screen relative flex md:h-250 2xl:h-310 "
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
@@ -74,7 +88,7 @@ export function Home() {
           <p
             className="text-xs 
           font-texto-normal-mobile font-semibold font
-          text-texto-branco w-49 h-16 text-center md:text-3xl md:w-[652px] md:mr-8 "
+          text-texto-branco w-49 h-16 text-center md:text-3xl md:w-[652px] md:mr-8 2xl:mt-10"
           >
             O MemoryBot é um robô assistente que ajuda pessoas com Alzheimer com
             lembretes, localização de objetos e interação simples por voz.
@@ -85,7 +99,7 @@ export function Home() {
           <img
             src={HomeCirc}
             alt="Decorative Circle"
-            className="right-3 w-55.3125 h-26.7525 mt-45 absolute md:w-[713.68px] md:mt-50.5"
+            className="right-3 w-55.3125 h-26.7525 mt-45 absolute md:w-[713.68px] md:mt-50.5 2xl:mt-76"
           />
 
           <img
@@ -97,23 +111,23 @@ export function Home() {
           <img
             src={MemoryBot}
             alt="Mobile Memory Bot"
-            className="right-5 w-50 h-80 mt-25 absolute drop-shadow-2xl md:w-[526px] md:h-[810px] md:mt-35 md:mr-10"
+            className="right-5 w-50 h-80 mt-25 absolute drop-shadow-2xl md:w-[526px] md:h-[810px] md:mt-35 md:mr-10 2xl:w-[550px] 2xl:h-[850px]"
           />
         </div>
       </section>
 
-      <div className="flex justify-center mb-24 md:absolute md:top-110 md:left-50">
+      <div className="flex justify-center mb-24 md:absolute md:top-110 md:left-50 2xl:top-130">
         <Link to="/instrucao">
           <ButtonInstrucoes />
         </Link>
       </div>
 
-      <section className="mb-20">
+      <section className="mb-20"  >
         <IconsHome />
       </section>
 
       <section className="mb-15">
-        <div className="flex justify-center" >
+        <div className="flex justify-center" data-aos="fade-up">
           <h1 className="font-h1-mobile text-4xl font-bold md:text-6xl  bg-clip-text text-transparent bg-gradient-to-r from-[rgba(32,162,155,155.100)] via-70% to-[rgba(13,67,61,100)]">
             Aplicativo
           </h1>
@@ -134,7 +148,10 @@ export function Home() {
             </h2>
           </div>
 
-          <div className="w-screen h-88.5 mt-10 block md:hidden">
+          <div
+            className="w-screen h-88.5 mt-10 block md:hidden "
+            data-aos="fade-left"
+          >
             <img src={HomeAppCel} alt="App Memory Bot" className="" />
           </div>
         </div>
@@ -142,7 +159,7 @@ export function Home() {
         {/* Pc */}
 
         <div
-          className="md:h-250 w-screen  justify-between hidden md:block bg-cover"
+          className="md:h-250 w-screen  justify-between hidden md:block bg-cover 2xl:h-330"
           style={{ backgroundImage: `url(${HomeAppRetDesktop})` }}
         >
           <div
@@ -156,19 +173,25 @@ export function Home() {
             </h2>
           </div>
 
-          <div className="w-screen h-88.5 ml-220 mt-10 hidden md:block md:w-150 ">
+          <div
+            className="w-screen h-88.5 ml-220 mt-10 hidden md:block md:w-150 2xl:ml-330 2xl:mt-110"
+            data-aos="fade-left"
+          >
             <img src={HomeAppCelDesktop} alt="App Memory Bot" className="" />
           </div>
 
-          <div className="flex flex-col justify-center items-center gap-7 md:justify-left md:items-center ">
-            <p className="text-xs md:text-3xl md:w-[592px] md:text-left md:mb-50 md:mr-190 md:mt-50 font-texto-normal-mobile font-semibold w-69 h-20 text-texto-ciano text-center mb-5">
+          <div
+            className="flex flex-col justify-center items-center gap-7 md:justify-left md:items-center "
+            data-aos="fade-up"
+          >
+            <p className="text-xs md:text-3xl md:w-[592px] md:text-left md:mb-50  md:mr-190 md:mt-50 2xl:mr-290 2xl:mt-[-10px] 2xl:mb-80 font-texto-normal-mobile font-semibold w-69 h-20 text-texto-ciano text-center mb-5 ">
               Gerencie as configurações do MemoryBot, personalize lembretes
               remotamente, acompanhe a rotina do usuário e receba notificações
               importantes diretamente no seu smartphone. Uma interface simples e
               acessível para cuidadores e familiares
             </p>
 
-            <div >
+            <div>
               <ButtonDownload />
             </div>
           </div>
@@ -223,7 +246,7 @@ export function Home() {
             className="w-full h-full object-cover"
           />
 
-          <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center ">
+          <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center " data-aos="fade-down">
             <h1 className="font-game md:text-8xl font-bold text-texto-neon md:mb-[591px]">
               MemoryBot
             </h1>

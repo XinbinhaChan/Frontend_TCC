@@ -7,6 +7,8 @@ import SobreNosWave1Desktop from "../../assets/SobreNosWave1Desktop.png";
 import SobreNosWave2Desktop from "../../assets/SobreNosWave2Desktop.png";
 import Rafalino from "../../assets/Rafalino.jpeg";
 
+
+
 export function SobreNos() {
   return (
     <div>

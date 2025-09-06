@@ -17,7 +17,7 @@ export function Referencias() {
         className="w-90 h-65 z-[-1] absolute left-0 pt-50 mt-36 flex flex-col justify-center items-center "
         style={{ backgroundImage: `url(${ReferenciasWave1})` }}
       >
-        <h1 className="text-texto-escuro text-[40px] font-texto-normal-mobile font-bold mt-120 mb-8 md:text-center md:mb-40">
+        <h1 className="text-texto-escuro text-[40px] font-texto-normal-mobile font-bold mt-120 mb-8 md:text-center md:mb-20 md:mt-150">
           Referências
         </h1>
 

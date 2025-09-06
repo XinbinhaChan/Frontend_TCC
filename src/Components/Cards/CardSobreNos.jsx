@@ -6,12 +6,12 @@ import CardSobreNosGithub from "../../assets/CardSobreNosGithub.png";
 
 export function CardSobreNos(props) {
   return (
-    <div className="md:relative bg-fundo-card2 md:w-[555px] md:h-[500px] w-39 h-57 flex flex-col items-center rounded-3xl md:ml-20 mb-20 md:mb-[37px] ">
+    <div className="md:relative bg-fundo-card2 md:w-[555px] md:h-[500px] 2xl:ml-50 w-39 h-57 flex flex-col items-center rounded-3xl md:ml-20 mb-20 md:mb-[37px] " data-aos="fade-down">
       <div className="md:absolute md:top-[1px] md:z-20">
         <img
           src={props.img}
           alt=""
-          className="rounded-full md:w-[216px] md:h-[212px] md:border-4 md:border-white shadow-lg md:hover:border-sky-200 md:duration-300"
+          className="rounded-full md:w-[216px] md:h-[212px] md:border-4 md:border-fundo-card2 shadow-lg md:hover:border-fundo-card md:duration-300"
         />
       </div>
 

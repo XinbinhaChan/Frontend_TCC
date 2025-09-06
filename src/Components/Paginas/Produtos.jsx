@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 import { CardProdutos } from '../Cards/CardProdutos'
 
@@ -17,11 +20,36 @@ import CardProdutosServo from '../../assets/CardProdutosServo.png'
 import HomeGameWave from '../../assets/HomeGameWave.png'
 
 export function Produtos() {
+
+
+  const [isAOSReady, setIsAOSReady] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out',
+      delay: 100,
+    });
+    setIsAOSReady(true);
+
+    const handleLoad = () => AOS.refresh();
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+      AOS.refreshHard();
+    };
+  }, []);
+
+  if (!isAOSReady) return null;
+
+
   return (
     <div className='flex flex-col items-center justify-center'>
 
         <div className='flex items-center justify-center mt-11 mb-11'>
-        <h1 className='text-4xl font-bold text-texto-escuro'>Produtos</h1>
+        <h1 className='text-4xl font-bold text-texto-escuro mt-10 md:mt-8'>Produtos</h1>
 
         </div>
 
