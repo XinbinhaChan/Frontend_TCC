@@ -119,7 +119,7 @@ export function Home() {
           <img
             src={HomeClareadorDark}
             alt=""
-            className="hidden dark:block right-0 left-32 w-65 h-25 mt-59 absolute rotate-170 md:hidden"
+            className="hidden dark:block right-0 left-32 w-65 h-25 mt-59 absolute rotate-170 dark:md:hidden"
           />
 
 

@@ -45,7 +45,7 @@ export function Game() {
       </section>
 
       <div
-        className="w-screen md:h-[960px] hidden md:block   "
+        className="w-screen md:h-[960px] hidden md:block  md:bg-cover"
         style={{ backgroundImage: `url(${GameBg1Desktop})` }}
       >
         <br />
@@ -66,7 +66,7 @@ export function Game() {
       </div>
       <section
         style={{ backgroundImage: `url(${GameBg2Desktop})` }}
-        className="w-screen md:h-[1440px] flex-col items-center justify-center hidden md:flex"
+        className="w-screen md:h-[1440px] flex-col items-center justify-center hidden md:flex  md:bg-cover"
       >
         <img
           src=""

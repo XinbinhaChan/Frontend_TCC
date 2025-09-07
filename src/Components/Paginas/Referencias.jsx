@@ -5,10 +5,10 @@ import { CardReferencias } from "../Cards/CardReferencias";
 import ReferenciasWave1 from "../../assets/ReferenciasWave1.png";
 import ReferenciasWave2 from "../../assets/ReferenciasWave2.png";
 
-import DA from "../../downloads/DA.pdf";
-import DAMA from "../../downloads/DAMA.pdf";
-import FF from "../../downloads/FF.pdf";
-import RC from "../../downloads/RC.pdf";
+const DA = "/downloads/DA.pdf";
+const DAMA = "/downloads/DAMA.pdf";
+const FF = "/downloads/FF.pdf";
+const RC = "/downloads/RC.pdf";
 
 export function Referencias() {
   return (
