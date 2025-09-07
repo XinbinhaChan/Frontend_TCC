@@ -46,10 +46,10 @@ export function Produtos() {
 
 
   return (
-    <div className='flex flex-col items-center justify-center'>
+    <div className='flex flex-col items-center justify-center dark:bg-dark-background'>
 
         <div className='flex items-center justify-center mt-11 mb-11'>
-        <h1 className='text-4xl font-bold text-texto-escuro mt-10 md:mt-8'>Produtos</h1>
+        <h1 className='text-4xl font-bold text-texto-escuro mt-10 md:mt-8 dark:text-texto-branco'>Produtos</h1>
 
         </div>
 

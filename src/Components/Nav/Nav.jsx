@@ -15,7 +15,7 @@ export function Nav() {
   return (
     <header>
       {/* Pc */}
-      <nav className="flex items-center md:gap-50 h-16 w-screen bg-nav-claro justify-between z-40 fixed">
+      <nav className="flex items-center md:gap-50 h-16 w-screen bg-nav-claro dark:bg-dark-nav justify-between z-40 fixed">
         <div className="flex items-center gap-4">
           <Link to="/">
             <img src={Logo} alt="logo" className="w-10 md:w-12 md:ml-5" />
@@ -52,10 +52,10 @@ export function Nav() {
 
         <div
           className={
-            menu ? "flex bg-menu-hamburguer p-11.75 mt-40 rounded" : "hidden"
+            menu ? "flex bg-menu-hamburguer dark:bg-dark-nav p-11.75 mt-40 rounded" : "hidden"
           }
         >
-          <ul className="text-texto-branco ">
+          <ul className="text-texto-branco">
             <Tema className="border-2-red-300 md:hidden" />
 
             <li className="mb-2">

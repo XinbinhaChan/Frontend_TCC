@@ -6,7 +6,7 @@ import CardSobreNosGithub from "../../assets/CardSobreNosGithub.png";
 
 export function CardSobreNos(props) {
   return (
-    <div className="md:relative bg-fundo-card2 md:w-[555px] md:h-[500px] 2xl:ml-50 w-39 h-57 flex flex-col items-center rounded-3xl md:ml-20 mb-20 md:mb-[37px] " data-aos="fade-down">
+    <div className="md:relative bg-fundo-card2 dark:bg-nav-claro dark: md:w-[555px] md:h-[500px] 2xl:ml-50 w-39 h-57 flex flex-col items-center rounded-3xl md:ml-20 mb-20 md:mb-[37px] " data-aos="fade-down">
       <div className="md:absolute md:top-[1px] md:z-20">
         <img
           src={props.img}
@@ -15,13 +15,13 @@ export function CardSobreNos(props) {
         />
       </div>
 
-      <div className="bg-fundo-card md:mt-[108px] md:w-[555px] md:h-[446.77px] w-39 h-42 flex flex-col justify-center items-center rounded-3xl md:pt-28 ">
+      <div className="bg-fundo-card dark:bg-dark-nav md:mt-[108px] md:w-[555px] md:h-[446.77px] w-39 h-42 flex flex-col justify-center items-center rounded-3xl md:pt-28 ">
         <div className="flex flex-col justify-center items-center mb-5">
-          <h1 className="font-texto-normal-mobile text-3xl text-texto-ciano md:text-3xl md:color-">
+          <h1 className="font-texto-normal-mobile text-3xl text-black dark:text-texto-branco md:text-3xl md:color-">
             {props.nome}
           </h1>
 
-          <h2 className="font-texto-normal text-xs font-medium line-clamp-2 text-center md:text-xl">
+          <h2 className="font-texto-normal text-xs font-medium line-clamp-2 text-center md:text-xl dark:text-texto-branco">
             {props.funcao}
           </h2>
         </div>

@@ -11,17 +11,17 @@ import Rafalino from "../../assets/Rafalino.jpeg";
 
 export function SobreNos() {
   return (
-    <div>
+    <div className="dark:bg-dark-background">
       <div className="pl-7 mb-5">
        
         <div className="md:hidden">
           <img src={SobreNosWave1} alt="" />
-          <h1 className="text-4xl font-bold font-h1-mobile text-black mt-4">
+          <h1 className="text-4xl font-bold font-h1-mobile text-black mt-4 dark:text-texto-branco">
             Sobre Nós
           </h1>
-          <p className="text-xs font-texto-normal-mobile mt-2 text-black">
+          <p className="text-xs font-texto-normal-mobile mt-2 text-black dark:text-texto-branco">
             Informações dos criadores do{" "}
-            <strong className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-teal-600 to-green-900">
+            <strong className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-teal-600">
               MemoryBot
             </strong>
           </p>

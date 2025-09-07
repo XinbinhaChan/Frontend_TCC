@@ -33,7 +33,7 @@ export default function IconsHome() {
           }`}
         >
           <div className="bg-gradient-to-r from-gradiente-icons1 to-gradiente-icons2 rounded-full p-[4px]">
-            <div className="bg-white rounded-full p-2">
+            <div className="bg-white dark:bg-dark-nav rounded-full p-2">
               <img src={HomeIcon1} alt="" className="w-20 h-20 md:hidden" />
               <img
                 src={HomeIcon1Desktop}
@@ -50,8 +50,8 @@ export default function IconsHome() {
                 : "opacity-0 translate-x-4 invisible"
             }`}
           >
-            <h1 className="md:text-[40px]">Diferencial</h1>
-            <p className="text-left font-texto-normal text-[10px] h-10 w-50 md:w-[570px] md:text-2xl">
+            <h1 className="md:text-[40px] dark:text-white">Diferencial</h1>
+            <p className="text-left font-texto-normal text-[10px] h-10 w-50 md:w-[570px] md:text-2xl dark:text-white">
               Nos destacamos por oferecer soluções simples, humanas e adaptadas
               à realidade dos cuidadores, com foco na autonomia do idoso,
               prevenção de riscos e apoio emocional a quem cuida.
@@ -73,7 +73,7 @@ export default function IconsHome() {
           }`}
         >
           <div className="bg-gradient-to-r from-gradiente-icons1 to-gradiente-icons2 rounded-full p-[4px]">
-            <div className="bg-white rounded-full p-2">
+            <div className="bg-white dark:bg-dark-nav rounded-full p-2">
               <img src={HomeIcon2} alt="" className="w-20 h-20 md:hidden" />
               <img
                 src={HomeIcon2Desktop}
@@ -90,8 +90,8 @@ export default function IconsHome() {
                 : "opacity-0 translate-x-4 invisible"
             }`}
           >
-            <h1 className="md:text-[40px]">Objetivo</h1>
-            <p className="text-left font-texto-normal text-[10px] h-10 w-50 md:w-[570px] md:text-2xl">
+            <h1 className="md:text-[40px] dark:text-white">Objetivo</h1>
+            <p className="text-left font-texto-normal text-[10px] h-10 w-50 md:w-[570px] md:text-2xl dark:text-white">
               Facilitar o dia a dia de cuidadores e profissionais da saúde,
               oferecendo orientações práticas e acessíveis para melhorar o
               cuidado, garantir segurança e promover o bem-estar dos idosos.
@@ -113,7 +113,7 @@ export default function IconsHome() {
           }`}
         >
           <div className="bg-gradient-to-r from-gradiente-icons1 to-gradiente-icons2 rounded-full p-[4px]">
-            <div className="bg-white rounded-full p-2">
+            <div className="bg-white dark:bg-dark-nav rounded-full p-2">
               <img src={HomeIcon3} alt="" className="w-20 h-20 md:hidden" />
               <img
                 src={HomeIcon3Desktop}
@@ -130,8 +130,8 @@ export default function IconsHome() {
                 : "opacity-0 translate-x-4 invisible"
             }`}
           >
-            <h1 className="md:text-[40px]">Público-Alvo</h1>
-            <p className="text-left font-texto-normal text-[10px] h-10 w-50 md:w-[570px] md:text-2xl">
+            <h1 className="md:text-[40px] dark:text-white">Público-Alvo</h1>
+            <p className="text-left font-texto-normal text-[10px] h-10 w-50 md:w-[570px] md:text-2xl dark:text-white">
               Nosso projeto é voltado para idosos com algum grau de dependência,
               como os que convivem com doenças neurodegenerativas ou limitações
               físicas, além de idosos que vivem sozinhos e estão mais
