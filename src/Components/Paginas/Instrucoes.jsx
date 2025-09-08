@@ -49,72 +49,77 @@ export function Instrucoes() {
   }
 
   return (
-    <div className="mt-15 dark:bg-dark-background font-texto-normal w-svh h-svh flex flex-col items-baseline justify-baseline">
-      <div className="mb-[69px] text-center md:text-left md:ml-5 ">
+    <div className="mt-15 font-texto-normal w-[1440px] h-max flex flex-col items-baseline justify-baseline dark:bg-dark-background">
+      <div className="mb-[69px] text-center md:text-left ">
         <h1 className=" text-[40px] bold md:text-[55px] md:ml-7 dark:text-texto-branco">
           Memory<span className="text-texto-azul">Bot</span>
         </h1>
-        <p className="md:text-[25px] dark:text-texto-branco">Instruções para o uso do produto</p>
+        <p className="md:text-[25px] dark:text-texto-branco">
+          Instruções para o uso do produto
+        </p>
       </div>
 
-      <div className="dark:bg-dark-background">
-        <ul className="h-70 md:bg-nav-claro md:h-115 md:w-[500px] md:text-texto-branco md:text-2xl md:p-5 md:rounded">
-          <li
-            className={
-              Config
-                ? "border-t-4 mb-5 md:border-none cursor-pointer hover:text-texto-azul duration-300 md:w-[309px] md:mb-[50px] text-texto-azul"
-                : "dark:text-texto-branco border-black border-t-4 mb-5 md:border-none cursor-pointer hover:text-texto-azul duration-300 md:w-[309px] md:mb-[50px]"
-            }
-            onClick={Configuracao}
-          >
-            1. Configuração Inicial
-          </li>
-          <div
-            className={
-              Config
-                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:text-texto-branco dark:bg-dark-background"
-                : "hidden"
-            }
-          >
-            {/* Fazer configuração apartir daqui */}
+      <div className="dark:bg-dark-background w-fit h-fit">
+        <ul className="h-70 md:bg-nav-claro dark:md:bg-dark-nav  md:h-fit md:w-[500px] md:text-texto-branco md:text-2xl md:p-5 md:rounded-tr-xl">
+          <div className="md:flex gap-51 md:w-fit">
+            <li
+              className={
+                Config
+                  ? "border-t-4 mb-5 md:border-none cursor-pointer hover:text-texto-azul duration-300 md:w-[309px] md:mb-[50px] text-texto-azul"
+                  : "dark:text-texto-branco border-black border-t-4 mb-5 md:border-none cursor-pointer hover:text-texto-azul duration-300 md:w-[309px] md:mb-[50px]"
+              }
+              onClick={Configuracao}
+            >
+              1. Configuração Inicial
+            </li>
+            <div
+              className={
+                Config
+                  ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:text-texto-branco dark:bg-dark-background md:text-black md:w-fit md:text-xl md:justify-center md:items-center"
+                  : "hidden"
+              }
+            >
+              {/* Fazer configuração apartir daqui */}
 
-            {/* era pra ser uma imagem aqui mas não ta indo  ai tu arruma*/}
-            <img src="" alt="" className="w-[290px] h-[145px] border-2" />
+              {/* era pra ser uma imagem aqui mas não ta indo  ai tu arruma*/}
+              <img src="" alt="" className="w-[290px] h-[145px] border-2" />
 
-            <p className="md:w-[799px] md:text-xl">
-              Antes do uso diário, é necessário realizar uma configuração
-              inicial simples, que pode ser feita por um familiar, cuidador ou
-              profissional de saúde.
-            </p>
+              <p className="md:w-[799px] md:text-xl">
+                Antes do uso diário, é necessário realizar uma configuração
+                inicial simples, que pode ser feita por um familiar, cuidador ou
+                profissional de saúde.
+              </p>
 
-            <ul className="list-disc list-inside space-y-2 md:w-[799px] md:text-xl">
-              <li>
-                Organização dos medicamentos: Separe os remédios de acordo com
-                os períodos do dia (manhã, tarde, noite) e insira nos
-                compartimentos apropriados do Memory Bot.
-              </li>
+              <ul className="list-disc list-inside space-y-2 md:w-[799px] md:text-xl">
+                <li>
+                  Organização dos medicamentos: Separe os remédios de acordo com
+                  os períodos do dia (manhã, tarde, noite) e insira nos
+                  compartimentos apropriados do Memory Bot.
+                </li>
 
-              <li>
-                Facilidade de identificação: Utilize etiquetas de cores
-                distintas ou símbolos táteis nos compartimentos para facilitar o
-                reconhecimento, pensando na acessibilidade do idoso.
-              </li>
+                <li>
+                  Facilidade de identificação: Utilize etiquetas de cores
+                  distintas ou símbolos táteis nos compartimentos para facilitar
+                  o reconhecimento, pensando na acessibilidade do idoso.
+                </li>
 
-              <li>
-                Download e emparelhamento do app: Baixe o aplicativo do Memory
-                Bot no celular do idoso ou do responsável. Siga o passo a passo
-                dentro do app para conectar o robô via Bluetooth.
-              </li>
+                <li>
+                  Download e emparelhamento do app: Baixe o aplicativo do Memory
+                  Bot no celular do idoso ou do responsável. Siga o passo a
+                  passo dentro do app para conectar o robô via Bluetooth.
+                </li>
 
-              <li>
-                Permissões essenciais: Autorize o uso de localização,
-                notificações, Bluetooth e microfone (para detecção de sons) no
-                celular onde o app está instalado.
-              </li>
-            </ul>
+                <li>
+                  Permissões essenciais: Autorize o uso de localização,
+                  notificações, Bluetooth e microfone (para detecção de sons) no
+                  celular onde o app está instalado.
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <li
+          <div className="md:flex gap-51 md:w-fit">
+            <li
             className={
               Lembretes
                 ? "border-t-4 mb-5 md:border-none cursor-pointer hover:text-texto-azul duration-300 md:w-[309px] md:mb-[50px] text-texto-azul"
@@ -128,7 +133,7 @@ export function Instrucoes() {
           <div
             className={
               Lembretes
-                ? "flex flex-col justify-baseline items-baseline w-100 font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco"
+                ? "flex flex-col justify-baseline items-baseline w-100 font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center"
                 : "hidden"
             }
           >
@@ -159,8 +164,10 @@ export function Instrucoes() {
               idoso ao longo do dia.
             </p>
           </div>
+          </div>
 
-          <li
+          <div className="md:flex gap-60 md:w-fit">
+            <li
             className={
               UsoDiario
                 ? "border-t-4 mb-5 md:border-none cursor-pointer hover:text-texto-azul duration-300 md:w-[309px] md:mb-[50px] text-texto-azul"
@@ -173,7 +180,7 @@ export function Instrucoes() {
           <div
             className={
               UsoDiario
-                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco"
+                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center"
                 : "hidden"
             }
           >
@@ -201,8 +208,10 @@ export function Instrucoes() {
               </li>
             </ul>
           </div>
+          </div>
 
-          <li
+          <div className="md:flex gap-60 md:w-fit">
+            <li
             className={
               ConfigDeUso
                 ? "border-t-4 mb-5 md:border-none cursor-pointer hover:text-texto-azul duration-300 md:w-[309px] md:mb-[50px] text-texto-azul"
@@ -215,14 +224,14 @@ export function Instrucoes() {
           <div
             className={
               ConfigDeUso
-                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco"
+                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center"
                 : "hidden"
             }
           >
             <img src="" alt="" className="w-[290px] h-[145px] border-2" />
             <p>
               Para garantir o registro correto do uso do medicamento, o Memory
-              Bot oferece duas formas de confirmação:
+              Bot oferece duas formas para a confirmação:
             </p>
             <ul className="list-disc list-inside space-y-2 md:w-[799px] md:text-xl">
               <li>
@@ -240,8 +249,10 @@ export function Instrucoes() {
               medicamentos estão sendo administrados corretamente.
             </p>
           </div>
+          </div>
 
-          <li
+          <div className="md:flex gap-62 md:w-fit">
+            <li
             className={
               Recurso
                 ? "border-t-4 mb-5 md:border-none cursor-pointer hover:text-texto-azul duration-300 md:w-[309px] md:mb-[50px] text-texto-azul"
@@ -251,11 +262,11 @@ export function Instrucoes() {
           >
             5. Recursos Adicionais para Segurança e Bem-estar
           </li>
-        </ul>
+        
         <div
           className={
             Recurso
-              ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco"
+              ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center"
               : "hidden"
           }
         >
@@ -317,6 +328,8 @@ export function Instrucoes() {
             </li>
           </ul>
         </div>
+          </div>
+        </ul>
       </div>
     </div>
   );
