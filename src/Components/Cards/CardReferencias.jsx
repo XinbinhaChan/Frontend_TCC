@@ -5,7 +5,7 @@ import ReferenciasPdfIconDesktop from "../../assets/ReferenciasPdfIconDesktop.pn
 
 export function CardReferencias(props) {
   return (
-    <div className="bg-fundo-card2 dark:bg-nav-claro flex items-center flex-col w-31 h-31 rounded-xl shadow-xl md:w-[650px] md:h-[280px] md:ml-140 2xl:ml-180">
+    <div className="bg-fundo-card2 dark:bg-nav-claro flex items-center flex-col w-31 h-31 rounded-xl shadow-xl md:w-[650px] md:h-[280px] md:ml-[-5px] 2xl:ml-180">
       <div className="bg-fundo-card dark:bg-dark-nav flex justify-center rounded-xl  items-center w-31 h-16.5 md:w-[650px] md:h-[149.93px]">
 
         <a href={props.download} download={props.arquivo} className="md:hidden">

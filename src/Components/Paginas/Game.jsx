@@ -18,7 +18,7 @@ export function Game() {
         className="w-screen h-62.5 md:hidden mt-16"
         style={{ backgroundImage: `url(${GameBg1})` }}
       >
-        <h1 className="text-texto-azul text-3xl font-bold font-game mb-2">
+        <h1 className="text-texto-azul text-3xl font-bold font-game mb-2 ">
           MemoryBot
         </h1>
         <div>
@@ -49,7 +49,7 @@ export function Game() {
         style={{ backgroundImage: `url(${GameBg1Desktop})` }}
       >
         <br />
-        <h1 className="text-texto-azul text-8xl font-bold font-game mb-[40px] text-center md:mt-15">
+        <h1 className="text-texto-azul text-8xl font-bold font-game mb-[40px] text-center md:mt-15 ">
           MemoryBot
         </h1>
         <div>

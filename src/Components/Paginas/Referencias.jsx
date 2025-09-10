@@ -14,7 +14,7 @@ export function Referencias() {
   return (
     <main className="flex flex-col justify-center items-center dark:bg-dark-background">
       <div
-        className="w-90 h-65 z-[-1] absolute left-0 pt-50 mt-36 flex flex-col justify-center items-center "
+        className="w-95 h-325 md:w-[1477.5px] md:h-[1600px] z-[-1] absolute left-0 pt-50 mt-36 flex flex-col justify-center items-center bg-cover dark:bg-dark-background"
         style={{ backgroundImage: `url(${ReferenciasWave1})` }}
       >
         <h1 className="text-texto-escuro text-[40px] font-texto-normal-mobile font-bold mt-120 mb-8 md:text-center md:mb-20 md:mt-150 dark:text-texto-branco">
@@ -28,7 +28,7 @@ export function Referencias() {
 
           <CardReferencias texto="A Doença de Alzheimer: Aspectos Fisiopatológicos e Farmacológicos (Rev Psiquiatr RS)" download={FF} arquivo="Fisiopatológicos_Farmacológicos.pdf"/>
 
-          <CardReferencias texto="Demência de Alzheimer: Correlação entre Memória e Autonomia (Rev Psig Clin)" download={DAMA} arquivo="Demencia_de_Alzheimer.pdf"/>
+          <CardReferencias texto="Demência de A'lzheimer: Correlação entre Memória e Autonomia (Rev Psig Clin)" download={DAMA} arquivo="Demencia_de_Alzheimer.pdf"/>
         </div>
 
         <img src={ReferenciasWave2} alt="" className="w-screen h-65 ml-10 md:hidden"/>

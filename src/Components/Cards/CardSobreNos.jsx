@@ -11,7 +11,7 @@ export function CardSobreNos(props) {
         <img
           src={props.img}
           alt=""
-          className="rounded-full md:w-[216px] md:h-[212px] md:border-4 md:border-fundo-card2 shadow-lg md:hover:border-fundo-card md:duration-300"
+          className="rounded-full w-30 h-30 md:w-[216px] md:h-[212px] md:border-4 md:border-fundo-card2 shadow-lg md:hover:border-fundo-card md:duration-300"
         />
       </div>
 
@@ -47,7 +47,7 @@ export function CardSobreNos(props) {
             href={props.linkGithub}
             className="bg-black rounded-2xl shadow-[0_0_60px_rgba(0,0,0,1)] md:w-[50px] md:flex md:justify-center md:items-center md:h-[50px] md:hover:w-[55px] md:hover:h-[55px] md:duration-200"
           >
-            <img src={CardSobreNosGithub} alt="GitHub" />
+            <img src={CardSobreNosGithub} alt="GitHub"/>
           </a>
         </div>
       </div>

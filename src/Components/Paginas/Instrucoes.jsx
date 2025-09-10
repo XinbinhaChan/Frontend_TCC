@@ -49,7 +49,7 @@ export function Instrucoes() {
   }
 
   return (
-    <div className="mt-15 font-texto-normal w-[1440px] h-max flex flex-col items-baseline justify-baseline dark:bg-dark-background">
+    <div className="mt-15 font-texto-normal w-[1500px] h-full flex flex-col items-baseline justify-baseline dark:bg-dark-background">
       <div className="mb-[69px] text-center md:text-left ">
         <h1 className=" text-[40px] bold md:text-[55px] md:ml-7 dark:text-texto-branco">
           Memory<span className="text-texto-azul">Bot</span>
@@ -60,7 +60,7 @@ export function Instrucoes() {
       </div>
 
       <div className="dark:bg-dark-background w-fit h-fit">
-        <ul className="h-70 md:bg-nav-claro dark:md:bg-dark-nav  md:h-fit md:w-[500px] md:text-texto-branco md:text-2xl md:p-5 md:rounded-tr-xl">
+        <ul className="h-150 md:bg-nav-claro dark:md:bg-dark-nav  md:h-fit md:w-[500px] md:text-texto-branco md:text-2xl md:p-5 md:rounded-tr-xl">
           <div className="md:flex gap-51 md:w-fit">
             <li
               className={

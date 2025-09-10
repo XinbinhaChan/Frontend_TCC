@@ -5,7 +5,11 @@ import { CardSobreNos } from "../Cards/CardSobreNos";
 import SobreNosWave1 from "../../assets/SobreNosWave1.png";
 import SobreNosWave1Desktop from "../../assets/SobreNosWave1Desktop.png";
 import SobreNosWave2Desktop from "../../assets/SobreNosWave2Desktop.png";
-import Rafalino from "../../assets/Rafalino.jpeg";
+
+import Rafael from "../../assets/Rafael.jpeg";
+import Navarro from "../../assets/Navarro.jpg";
+import Vidal from "../../assets/Vidal.jpg";
+import Maximiano from "../../assets/Maximiano.jpg";
 
 
 
@@ -35,10 +39,10 @@ export function SobreNos() {
             className="w-full h-auto object-cover"
           />
           <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-center px-4 z-10">
-            <h1 className="text-9xl font-bold font-h1-mobile text-black">
+            <h1 className="text-9xl font-bold font-h1-mobile text-black dark:text-texto-branco">
               Sobre Nós
             </h1>
-            <p className="text-lg font-texto-normal-mobile mt-2 text-black">
+            <p className="text-lg font-texto-normal-mobile mt-2 text-black dark:text-texto-branco">
               Informações dos criadores do{" "}
               <strong className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-teal-600 to-green-900">
                 MemoryBot
@@ -50,7 +54,7 @@ export function SobreNos() {
 
       <div className="grid grid-cols-2 gap-10">
         <CardSobreNos
-          img={Rafalino}
+          img={Rafael}
           nome="Rafael"
           funcao="Líder e Desenvolvedor do jogo e site"
           linkGithub="https://github.com/RafaelLfckkj"
@@ -59,7 +63,7 @@ export function SobreNos() {
         />
 
         <CardSobreNos
-          img={Rafalino}
+          img={Maximiano}
           nome="Maximiano"
           funcao="Designer e Desenvolvedor do site"
           linkGithub="https://github.com/XinbinhaChan"
@@ -68,7 +72,7 @@ export function SobreNos() {
         />
 
         <CardSobreNos
-          img={Rafalino}
+          img={Navarro}
           nome="Navarro"
           funcao="Designer e Desenvolvedor do projeto"
           linkGithub="https://github.com/matheusnw1"
@@ -77,7 +81,7 @@ export function SobreNos() {
         />
 
         <CardSobreNos
-          img={Rafalino}
+          img={Vidal}
           nome="Yago"
           funcao="Desenvolvedor principal do projeto"
           linkGithub="https://github.com/YagoVid"
