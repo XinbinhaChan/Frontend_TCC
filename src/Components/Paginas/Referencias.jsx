@@ -14,7 +14,7 @@ export function Referencias() {
   return (
     <main className="flex flex-col justify-center items-center dark:bg-dark-background">
       <div
-        className="w-95 h-325 md:w-[1477.5px] md:h-[1600px] z-[-1] absolute left-0 pt-50 mt-36 flex flex-col justify-center items-center bg-cover dark:bg-dark-background"
+        className="w-95 h-325 md:w-[1477.5px] md:h-[1600px] 2xl:w-[1911.5px] 2xl:h-[1750px]  z-[-1] absolute left-0 pt-50 mt-36 flex flex-col justify-center items-center bg-cover dark:bg-dark-background"
         style={{ backgroundImage: `url(${ReferenciasWave1})` }}
       >
         <h1 className="text-texto-escuro text-[40px] font-texto-normal-mobile font-bold mt-120 mb-8 md:text-center md:mb-20 md:mt-150 dark:text-texto-branco">
