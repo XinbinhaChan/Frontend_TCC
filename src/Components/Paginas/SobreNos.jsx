@@ -83,7 +83,7 @@ export function SobreNos() {
         <CardSobreNos
           img={Vidal}
           nome="Yago"
-          funcao="Desenvolvedor principal do projeto"
+          funcao="Desenvolvedor principal do projeto e do jogo"
           linkGithub="https://github.com/YagoVid"
           linkLinkedin="https://www.linkedin.com/in/yago-vidal-oliveira-de-almeida-449883304/"
           linkInsta="https://www.instagram.com/yagovidar/"

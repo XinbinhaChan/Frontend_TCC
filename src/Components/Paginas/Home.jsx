@@ -201,7 +201,7 @@ export function Home() {
             className="flex flex-col justify-center items-center gap-7 md:justify-left md:items-center "
             data-aos="fade-up"
           >
-            <p className="text-xs md:text-3xl md:w-[592px] md:text-left md:mb-50  md:mr-190 md:mt-50 2xl:mr-290 2xl:mt-[-10px] 2xl:mb-80 font-texto-normal-mobile w-69 h-20 text-texto-ciano text-center mb-5 dark:text-texto-white">
+            <p className="text-xs md:text-3xl md:w-[592px] md:text-left md:mb-50  md:mr-190 md:mt-50 2xl:mr-290 2xl:mt-[-10px] 2xl:mb-80 font-texto-normal-mobile w-69 h-20 text-texto-ciano text-center mb-5 dark:text-texto-branco">
               Gerencie as configurações do MemoryBot, personalize lembretes
               remotamente, acompanhe a rotina do usuário e receba notificações
               importantes diretamente no seu smartphone. Uma interface simples e

@@ -59,7 +59,7 @@ export function Instrucoes() {
         </p>
       </div>
 
-      <div className="dark:bg-dark-background w-fit h-fit">
+      <div className="dark:bg-dark-background w-fit h-fit border-2 border-red-500 md:flex md:gap-10 2xl:gap-80">
         <ul className="h-180 md:bg-nav-claro dark:md:bg-dark-nav  md:h-fit md:w-[500px] md:text-texto-branco md:text-2xl md:p-5 md:rounded-tr-xl 2xl:h-177">
           <div className="md:flex gap-51 md:w-fit">
             <li
@@ -75,7 +75,7 @@ export function Instrucoes() {
             <div
               className={
                 Config
-                  ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:text-texto-branco dark:bg-dark-background md:text-black md:w-fit md:text-xl md:justify-center md:items-center"
+                  ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:text-texto-branco dark:bg-dark-background md:text-black md:w-fit md:text-xl md:justify-center md:items-center md:hidden"
                   : "hidden"
               }
             >
@@ -117,6 +117,7 @@ export function Instrucoes() {
               </ul>
             </div>
           </div>
+          
 
           <div className="md:flex gap-51 md:w-fit">
             <li
@@ -133,7 +134,7 @@ export function Instrucoes() {
           <div
             className={
               Lembretes
-                ? "flex flex-col justify-baseline items-baseline w-100 font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center"
+                ? "flex flex-col justify-baseline items-baseline w-100 font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center  md:hidden"
                 : "hidden"
             }
           >
@@ -180,7 +181,7 @@ export function Instrucoes() {
           <div
             className={
               UsoDiario
-                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center"
+                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center md:hidden"
                 : "hidden"
             }
           >
@@ -224,7 +225,7 @@ export function Instrucoes() {
           <div
             className={
               ConfigDeUso
-                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center"
+                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center md:hidden"
                 : "hidden"
             }
           >
@@ -266,7 +267,7 @@ export function Instrucoes() {
         <div
           className={
             Recurso
-              ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center"
+              ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center md:hidden"
               : "hidden"
           }
         >
@@ -330,7 +331,57 @@ export function Instrucoes() {
         </div>
           </div>
         </ul>
-      </div>
+
+        
+          <div className="hidden md:flex justify-center items-center border-2 border-yellow-500">
+             <div
+              className={
+                Config
+                  ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:text-texto-branco dark:bg-dark-background md:text-black md:w-fit md:text-xl md:justify-center md:items-center "
+                  : "hidden"
+              }
+            >
+              {/* Fazer configuração apartir daqui */}
+
+              {/* era pra ser uma imagem aqui mas não ta indo  ai tu arruma*/}
+              <img src="" alt="" className="w-[290px] h-[145px] border-2 2xl:w-[500px] 2xl:h-[250px]" />
+
+              <p className="md:w-[799px] md:text-xl">
+                Antes do uso diário, é necessário realizar uma configuração
+                inicial simples, que pode ser feita por um familiar, cuidador ou
+                profissional de saúde.
+              </p>
+
+              <ul className="list-disc list-inside space-y-2 md:w-[799px] md:text-xl">
+                <li>
+                  Organização dos medicamentos: Separe os remédios de acordo com
+                  os períodos do dia (manhã, tarde, noite) e insira nos
+                  compartimentos apropriados do Memory Bot.
+                </li>
+
+                <li>
+                  Facilidade de identificação: Utilize etiquetas de cores
+                  distintas ou símbolos táteis nos compartimentos para facilitar
+                  o reconhecimento, pensando na acessibilidade do idoso.
+                </li>
+
+                <li>
+                  Download e emparelhamento do app: Baixe o aplicativo do Memory
+                  Bot no celular do idoso ou do responsável. Siga o passo a
+                  passo dentro do app para conectar o robô via Bluetooth.
+                </li>
+
+                <li>
+                  Permissões essenciais: Autorize o uso de localização,
+                  notificações, Bluetooth e microfone (para detecção de sons) no
+                  celular onde o app está instalado.
+                </li>
+              </ul>
+            </div>
+          </div>
+          </div>
+        
+      
     </div>
   );
 }
