@@ -6,7 +6,7 @@ import SobreNosWave1 from "../../assets/SobreNosWave1.png";
 import SobreNosWave1Desktop from "../../assets/SobreNosWave1Desktop.png";
 import SobreNosWave2Desktop from "../../assets/SobreNosWave2Desktop.png";
 
-import Rafael from "../../assets/Rafael.jpeg";
+import Rafael from "../../assets/Rafael.jpg";
 import Navarro from "../../assets/Navarro.jpg";
 import Vidal from "../../assets/Vidal.jpg";
 import Maximiano from "../../assets/Maximiano.jpg";
