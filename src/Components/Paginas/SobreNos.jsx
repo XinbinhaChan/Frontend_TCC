@@ -90,7 +90,7 @@ export function SobreNos() {
         />
       </div>
 
-      <img src={SobreNosWave2Desktop} alt="" className="hidden md:block" />
+      <img src={SobreNosWave2Desktop} alt="" className="hidden md:block mr-68 2xl:mr-180" />
     </div>
   );
 }
