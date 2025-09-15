@@ -53,7 +53,7 @@ export function Instrucoes() {
   }, []);
 
   return (
-    <div className="mt-15 font-texto-normal w-[1500px] h-full flex flex-col items-baseline justify-baseline dark:bg-dark-background 2xl:w-[1950px] 2xl:h-[1415px]">
+    <div className="mt-15 font-texto-normal w-[1500px] h-full flex flex-col items-baseline md:h-350 justify-baseline dark:bg-dark-background 2xl:w-[1950px] 2xl:h-[1415px]">
       <div className="mb-[69px] text-center w-full">
         <h1 className=" text-[40px] bold md:text-[55px]  dark:text-texto-branco m">
           Memory<span className="text-texto-azul">Bot</span>
@@ -63,8 +63,8 @@ export function Instrucoes() {
         </p>
       </div>
 
-      <div className="dark:bg-dark-background w-fit h-fit md:flex md:gap-25 2xl:gap-80">
-        <ul className="h-180 md:bg-nav-claro dark:md:bg-dark-nav  md:h-350 md:w-[500px] md:text-texto-branco md:text-2xl md:p-5 md:rounded-tr-xl 2xl:h-[1220px]">
+      <div className="dark:bg-dark-background w-fit h-fit md:flex md:gap-25 2xl:gap-80"> 
+        <ul className="h-180 md:bg-nav-claro dark:md:bg-dark-nav  md:h-350 md:w-[500px] md:text-texto-branco md:text-2xl md:p-5 md:rounded-tr-xl 2xl:h-[1220px] md:fixed">
           <div className="md:flex gap-51 md:w-fit">
             <li
               className={
@@ -79,7 +79,7 @@ export function Instrucoes() {
             <div
               className={
                 Config
-                  ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:text-texto-branco dark:bg-dark-background md:text-black md:w-fit md:text-xl md:justify-center md:items-center md:hidden"
+                  ? "p-5 flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:text-texto-branco dark:bg-dark-background md:text-black md:w-fit md:text-xl md:justify-center md:items-center md:hidden"
                   : "hidden"
               }
             >
@@ -137,7 +137,7 @@ export function Instrucoes() {
             <div
               className={
                 Lembretes
-                  ? "flex flex-col justify-baseline items-baseline w-100 font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center  md:hidden"
+                  ? "p-5 flex flex-col justify-baseline items-baseline w-100 font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center  md:hidden"
                   : "hidden"
               }
             >
@@ -185,7 +185,7 @@ export function Instrucoes() {
             <div
               className={
                 UsoDiario
-                  ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center md:hidden"
+                  ? "p-5 flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center md:hidden"
                   : "hidden"
               }
             >
@@ -229,7 +229,7 @@ export function Instrucoes() {
             <div
               className={
                 ConfigDeUso
-                  ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center md:hidden"
+                  ? "p-5 flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center md:hidden"
                   : "hidden"
               }
             >
@@ -271,7 +271,7 @@ export function Instrucoes() {
             <div
               className={
                 Recurso
-                  ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center md:hidden"
+                  ? "p-5 flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center md:hidden"
                   : "hidden"
               }
             >
@@ -342,7 +342,7 @@ export function Instrucoes() {
           <div
             className={
               Config
-                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:text-texto-branco dark:bg-dark-background md:text-black md:w-fit md:text-xl md:justify-center md:items-center "
+                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:text-texto-branco dark:bg-dark-background md:text-black md:w-fit md:text-xl md:justify-center md:items-center md:ml-150 2xl:ml-200"
                 : "hidden"
             }
           >
@@ -400,7 +400,7 @@ export function Instrucoes() {
           <div
             className={
               Lembretes
-                ? "flex flex-col justify-baseline items-baseline w-100 font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center"
+                ? "flex flex-col justify-baseline items-baseline w-100 font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center  md:ml-150 2xl:ml-200"
                 : "hidden"
             }
           >
@@ -447,7 +447,7 @@ export function Instrucoes() {
           <div
             className={
               UsoDiario
-                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center"
+                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center  md:ml-150 2xl:ml-200"
                 : "hidden"
             }
           >
@@ -486,7 +486,7 @@ export function Instrucoes() {
           <div
             className={
               ConfigDeUso
-                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center"
+                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center  md:ml-150 2xl:ml-200"
                 : "hidden"
             }
           >
@@ -523,7 +523,7 @@ export function Instrucoes() {
           <div
             className={
               Recurso
-                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background md:mt-100 dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center md:h"
+                ? "flex flex-col justify-baseline items-baseline w-[375px] font-texto-normal-mobile dark:bg-dark-background md:mt-100 dark:text-texto-branco md:text-black md:w-fit md:text-xl md:justify-center md:items-center  md:ml-150 2xl:ml-200"
                 : "hidden"
             }
           >

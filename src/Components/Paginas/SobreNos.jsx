@@ -15,10 +15,10 @@ import Maximiano from "../../assets/Maximiano.jpg";
 
 export function SobreNos() {
   return (
-    <div className="dark:bg-dark-background">
+    <div className="dark:bg-dark-background flex flex-col justify-center items-center">
       <div className="pl-7 mb-5">
        
-        <div className="md:hidden">
+        <div className="md:hidden flex flex-col items-center">
           <img src={SobreNosWave1} alt="" />
           <h1 className="text-4xl font-bold font-h1-mobile text-black mt-4 dark:text-texto-branco">
             Sobre Nós

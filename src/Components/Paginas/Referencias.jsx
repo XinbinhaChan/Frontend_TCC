@@ -16,7 +16,7 @@ export function Referencias() {
   }, []);
 
   return (
-    <main className="flex flex-col justify-center items-center dark:bg-dark-background">
+    <main className="flex flex-col justify-center items-center dark:bg-dark-background overflow-x-hidden">
       <div
         className="w-95 h-325 md:w-[1477.5px] md:h-[2550px] 2xl:w-[1911.5px] 2xl:h-[1780px]  z-[-1] absolute left-0 pt-50 mt-36 flex flex-col justify-center items-center bg-cover dark:bg-dark-background"
         style={{ backgroundImage: `url(${ReferenciasWave1})` }}
