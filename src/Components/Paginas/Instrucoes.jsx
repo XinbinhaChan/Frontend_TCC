@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Quando for começar essa pagina já deixa mt-15 para a nav não ficar bugada :) se prescisar só aumentar
 export function Instrucoes() {
@@ -47,6 +47,10 @@ export function Instrucoes() {
     SetConfigDeUso(false);
     SetRecurso(!Recurso);
   }
+
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="mt-15 font-texto-normal w-[1500px] h-full flex flex-col items-baseline justify-baseline dark:bg-dark-background 2xl:w-[1950px] 2xl:h-[1415px]">

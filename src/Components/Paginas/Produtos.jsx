@@ -53,7 +53,7 @@ export function Produtos() {
 
         </div>
 
-        <section className="flex-col columns-2 items-center justify-center gap-2.5">
+        <section className="flex-col columns-2 gap-10 md:gap-50">
 
             <CardProdutos img={CardProdutosEsp32} nome="Esp32" preco="R$ 49,90"/>
 
