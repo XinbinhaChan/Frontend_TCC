@@ -5,10 +5,10 @@ import { CardReferencias } from "../Cards/CardReferencias";
 import ReferenciasWave1 from "../../assets/ReferenciasWave1.png";
 import ReferenciasWave2 from "../../assets/ReferenciasWave2.png";
 
-const DA = "Public/downloads/DA.pdf";
-const DAMA = "Public/downloads/DAMA.pdf";
-const FF = "Public/downloads/FF.pdf";
-const RC = "Public/downloads/RC.pdf";
+const DA = "Public/Downloads/DA.pdf";
+const DAMA = "Public/Downloads/DAMA.pdf";
+const FF = "Public/Downloads/FF.pdf";
+const RC = "Public/Downloads/RC.pdf";
 
 export function Referencias() {
   useEffect(() => {
